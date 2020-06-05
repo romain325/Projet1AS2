@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <lecon>
+    <nom>test</nom>
+    <description>testestestestestest</description>
+    <image>/data/logo.png</image>
+  </lecon>
+  <lecon>
+    <nom>test1</nom>
+    <description>testestestestestest</description>
+    <image>/data/logo.png</image>
+  </lecon>
+  <lecon>
+    <nom>test2</nom>
+    <description>testestestestestest</description>
+    <image>/data/logo.png</image>
+  </lecon>
+  <lecon>
+    <nom>test3</nom>
+    <description>testestestestestest</description>
+    <image>/data/logo.png</image>
+  </lecon>
+</root>

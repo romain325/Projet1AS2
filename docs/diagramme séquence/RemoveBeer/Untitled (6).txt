@@ -1,0 +1,16 @@
+**title** RemoveBeer Interaction
+
+RemoveBeer->RemoveIt:Button "Remove one" clicked
+RemoveIt->RemoveIt : CanExecute() 
+
+RemoveIt->DialogBox: ask user if sure or not
+alt DialogBoxIsYes
+DialogBox --> RemoveIt: true
+RemoveIt->Library:DicoBiere.Remove(val)
+RemoveIt->Manager_DataManager_BeerData: RemoveOneFromFile(val)
+RemoveIt->Manager_EventHub: OnBeerDicChanged(this)
+Manager_EventHub-->RemoveBeer: BeerDicChanged trigger
+RemoveBeer->RemoveBeer: OnBeerRemoved()
+else DialogBoxIsNo
+DialogBox --> RemoveBeer: nothing
+end 

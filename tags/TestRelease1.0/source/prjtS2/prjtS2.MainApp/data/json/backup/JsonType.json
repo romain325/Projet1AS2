@@ -1,0 +1,40 @@
+{
+  "root": [
+    {
+      "type": {
+        "key": "ipa",
+        "value": "Indian Pale Ale"
+      }
+    },
+    {
+      "type": {
+        "key": "ipl",
+        "value": "Indian Pale Lager"
+      }
+    },
+    {
+      "type": {
+        "key": "lager",
+        "value": "Läger"
+      }
+    },
+    {
+      "type": {
+        "key": "lambic",
+        "value": "Lambic"
+      }
+    },
+    {
+      "type": {
+        "key": "triple",
+        "value": "Triple"
+      }
+    },
+    {
+      "type": {
+        "key": "ale",
+        "value": "Ale"
+      }
+    }
+  ]
+}

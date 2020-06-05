@@ -1,0 +1,216 @@
+{
+  "root": [
+    {
+      "biere": {
+        "name": "jvais me foutre enlair",
+        "desc": "serieusement ca me gave jsuis une merde",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 1.2,
+        "prix": 235.0,
+        "brasserie": "tuez moi",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "ambre",
+          "styles": [
+            "na"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "na"
+          ],
+          "types": [
+            "na"
+          ],
+          "spec": [
+            "na"
+          ],
+          "aromes": [
+            "na"
+          ]
+        },
+        "image": [
+          "data/logo.png",
+          "data/logo.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "erfdve",
+        "desc": "rvfdvx",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 1.2,
+        "prix": 34.0,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "blonc",
+          "styles": [
+            "bleg"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "mil"
+          ],
+          "types": [
+            "lambic"
+          ],
+          "spec": [
+            "sake"
+          ],
+          "aromes": [
+            "fruit"
+          ]
+        },
+        "image": [
+          "data/logo.png",
+          "data/logo.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "testds",
+        "desc": "et",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 1.2,
+        "prix": 53.0,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "dore",
+          "styles": [
+            "mleg",
+            "trouble"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "na",
+            "sorgho"
+          ],
+          "types": [
+            "na",
+            "ipl"
+          ],
+          "spec": [
+            "na",
+            "fut_chene"
+          ],
+          "aromes": [
+            "mine",
+            "amer"
+          ]
+        },
+        "image": [
+          "data/logo.png",
+          "data/logo.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "YOUHOU",
+        "desc": "kill me pls",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 10.0,
+        "prix": 10.0,
+        "brasserie": "je suis un super test",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "brune",
+          "styles": [
+            "opaq"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "orge"
+          ],
+          "types": [
+            "ipl"
+          ],
+          "spec": [
+            "fut_chene"
+          ],
+          "aromes": [
+            "bois"
+          ]
+        },
+        "image": [
+          "data/logo.png",
+          "data/logo.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "Delirium Argentum",
+        "desc": "Bon c'est just un test",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 3.5,
+        "prix": 4.3,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "blonc",
+          "styles": [
+            "limp"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "houblon",
+            "mais",
+            "ble"
+          ],
+          "types": [
+            "ipa"
+          ],
+          "spec": [
+            "sake"
+          ],
+          "aromes": [
+            "bois"
+          ]
+        },
+        "image": [
+          "data/img/biere/delirium argentum1.png",
+          "data/img/biere/delirium argentum2.png",
+          "data/logo.png"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="prjtS2.MainApp.ElemDecouverte"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prjtS2.MainApp" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             x:Name="Decouv"
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="5"/>
+            <Setter Property="CornerRadius" Value="70"/>
+            <Setter Property="Background" Value="{DynamicResource PrimaryHueLightBrush}"/>
+        </Style>
+    </UserControl.Resources>
+
+    <materialDesign:PopupBox HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" StaysOpen="True">
+        <materialDesign:PopupBox.ToggleContent>
+            <Border HorizontalAlignment="Stretch">
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <Image Source="{Binding Decouverte.Images[0],ElementName=Decouv, Converter={StaticResource UriToBitmapConver}}"  Grid.Row="0"/>
+                    <Viewbox Margin="20" Grid.Row="1">
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Decouverte.Nom,ElementName=Decouv}"/>
+                    </Viewbox>
+
+                </Grid>
+            </Border>
+        </materialDesign:PopupBox.ToggleContent>
+            <local:Biere BeerPropName="{Binding Decouverte.Biere.Nom,ElementName=Decouv, Converter={StaticResource StringToLow}}"/>
+    </materialDesign:PopupBox>
+
+
+</UserControl>

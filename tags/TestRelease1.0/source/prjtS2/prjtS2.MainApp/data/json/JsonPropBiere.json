@@ -1,0 +1,47 @@
+{
+  "root": [
+    {
+      "biere": {
+        "name": "binsoiRzef",
+        "desc": "Masi enfin joseé",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 2.3,
+        "prix": 1.2,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": false
+        },
+        "apparence": {
+          "couleur": "blonc",
+          "styles": [
+            "bleg",
+            "limp"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "test"
+          ],
+          "types": [
+            "lager"
+          ],
+          "spec": [
+            "fut_chene"
+          ],
+          "aromes": [
+            "bois"
+          ]
+        },
+        "image": [
+          "",
+          "",
+          ""
+        ],
+        "others": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+title Recherche Biere
+
+RechercheBiere->RechercheBiere:RessourceChanged()
+RechercheBiere->GetSearchMatch:
+GetSearchMatch->SearchBiereResult:
+SearchBiereResult->ReGex:
+ReGex-->SearchBiereResult: New Regex
+alt User IsConnected
+SearchBiereResult->SearchBiereResult: Add UserLimitation
+end 
+alt Parmeter Is Precised
+SearchBiereResult->SearchBiereResult:Add Parameter to Search
+end
+SearchBiereResult-->RechercheBiere: ObservableCollection result

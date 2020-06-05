@@ -1,0 +1,78 @@
+﻿<Window x:Class="prjtS2.MainApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prjtS2.MainApp"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="500" MinWidth="800" Height="880" Width="1720">
+
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="2*"/>
+            <RowDefinition Height="96*"/>
+            <RowDefinition  Height="2*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#32893D" Grid.Row="0" />
+        <Grid Grid.Row="1" Cursor="Hand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="85*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel Background="{DynamicResource defaultButtonBackground}">
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="data/logo.png"  Grid.Column="0"/>
+                    <Viewbox Grid.Column="1">
+                        <TextBlock VerticalAlignment="Center" TextAlignment="Center" FontFamily="{DynamicResource defaultTitleFontFamily}" Margin="0 0 5 0">
+                            LE MOUSSEUR
+                            <LineBreak/>
+                            <LineBreak/>
+                            MOUSSEUX
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+
+                    <Button Style="{DynamicResource barButton}" x:Name="btnBiere" Cursor="Hand" Click="rechBiereClick">
+                            <TextBlock TextWrapping="Wrap">Rechercher une bière</TextBlock>
+                    </Button>
+
+                    <Button Grid.Row="1" Style="{DynamicResource barButton}" Click="rechBrasserieClick" Cursor="Hand">
+                        <TextBlock TextWrapping="Wrap">Rechercher une brasserie</TextBlock>
+                    </Button>
+
+                    <Button Grid.Row="2" Style="{DynamicResource barButton}" Click="leconsClick" Cursor="Hand">
+                        <TextBlock TextWrapping="Wrap">Petites Leçons</TextBlock>
+                    </Button>
+   
+                    <Button Grid.Row="3" Style="{DynamicResource barButton}" Click="decouverteClick" Cursor="Hand">
+                        <TextBlock TextWrapping="Wrap">Découverte</TextBlock>
+                    </Button>
+
+                    <Button Grid.Row="4" Style="{DynamicResource barButton}" Margin="5" Click="profilClick" Cursor="Hand">
+                        <TextBlock TextWrapping="Wrap">Mon Profil</TextBlock>
+                    </Button>
+
+                </Grid>
+            </DockPanel>
+
+            <ContentControl Grid.Column="1"  x:Name="contentControl" Background="{StaticResource MenuBG}"/>
+        </Grid>
+
+        <Rectangle Fill="#32893D" Grid.Row="2"/>
+    </Grid>
+</Window>

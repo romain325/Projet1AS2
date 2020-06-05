@@ -1,0 +1,40 @@
+{
+  "root": [
+    {
+      "arome": {
+        "key": "amer",
+        "value": "Amer"
+      }
+    },
+    {
+      "arome": {
+        "key": "aigre",
+        "value": "Aigre"
+      }
+    },
+    {
+      "arome": {
+        "key": "sucre",
+        "value": "Sucré"
+      }
+    },
+    {
+      "arome": {
+        "key": "bois",
+        "value": "Boisé"
+      }
+    },
+    {
+      "arome": {
+        "key": "fruit",
+        "value": "Fruité"
+      }
+    },
+    {
+      "arome": {
+        "key": "mine",
+        "value": "Minéral"
+      }
+    }
+  ]
+}

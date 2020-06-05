@@ -1,0 +1,17 @@
+title ConenxionProcess
+
+Connexion->Mng_CoHandl_Connexion:
+Mng_CoHandl_Connexion->CheckComptes:
+CheckComptes->Mng_DataManager:  GetOneFromFile(username)
+CheckComptes<--Mng_DataManager: return Profil
+CheckComptes->CheckPassword: Profil
+CheckPassword -> Decrypt:
+alt Password True
+Decrypt-->Mng_CoHandl_Connexion: return Profil
+Mng_CoHandl_Connexion->Mng_CoHandl_Connexion: CheckAdmin()
+Mng_CoHandl_Connexion->Mng_CoHandl_User: = profil
+Mng_CoHandl_Connexion->Mng_CoHandl_IsConnected: = true
+Connexion->Mng_Navigation: NavigateTo("profil")
+else Password False
+Decrypt-->Connexion:throw New Exception
+end

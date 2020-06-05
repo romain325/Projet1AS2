@@ -1,0 +1,64 @@
+{
+  "root": [
+    {
+      "cereale": {
+        "key": "na",
+        "value": "Aucune Préference"
+      }
+    },
+    {
+      "cereale": {
+        "key": "houblon",
+        "value": "Houblon"
+      }
+    },
+    {
+      "cereale": {
+        "key": "orge",
+        "value": "Orge"
+      }
+    },
+    {
+      "cereale": {
+        "key": "sorgho",
+        "value": "Sorgho"
+      }
+    },
+    {
+      "cereale": {
+        "key": "millet",
+        "value": "Millet"
+      }
+    },
+    {
+      "cereale": {
+        "key": "mil",
+        "value": "Mil"
+      }
+    },
+    {
+      "cereale": {
+        "key": "mais",
+        "value": "Maïs"
+      }
+    },
+    {
+      "cereale": {
+        "key": "riz",
+        "value": "Riz"
+      }
+    },
+    {
+      "cereale": {
+        "key": "ble",
+        "value": "Blé"
+      }
+    },
+    {
+      "cereale": {
+        "key": "test",
+        "value": "test"
+      }
+    }
+  ]
+}

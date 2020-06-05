@@ -3,3 +3,22 @@
 ################################################################################
 
 /trunk/source/prjtS2/.vs/prjtS2
+/trunk/source/prjtS2/prjtS2.Shared
+/trunk/source/prjtS2/prjtS2.FunctLibrary/bin
+/trunk/source/prjtS2/prjtS2.FunctLibrary/obj
+/trunk/source/prjtS2/prjtS2.MainApp/bin
+/trunk/source/prjtS2/prjtS2.MainApp/obj
+/trunk/source/prjtS2/prjtS2.Persistance/bin
+/trunk/source/prjtS2/prjtS2.Persistance/obj
+/trunk/source/prjtS2/ProjectTesting/bin/Debug/netcoreapp3.1
+/trunk/source/prjtS2/ProjectTesting/obj
+/trunk/source/prjtS2/TestProject/bin/Debug/netcoreapp3.1
+/trunk/source/prjtS2/TestProject/obj
+/tags/TestRelease1.0/source/prjtS2/.vs/prjtS2
+/tags/TestRelease1.0/source/prjtS2/prjtS2.FunctLibrary/obj
+/tags/TestRelease1.0/source/prjtS2/prjtS2.MainApp/obj
+/tags/TestRelease1.0/source/prjtS2/prjtS2.Persistance/obj
+/tags/TestRelease1.0/source/prjtS2/ProjectTesting/obj
+/tags/TestRelease1.0/source/prjtS2/TestProject/obj
+/InstallationTest
+/.svn

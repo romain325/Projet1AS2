@@ -1,0 +1,58 @@
+{
+  "root": [
+    {
+      "style": {
+        "key": "dore",
+        "value": "Doré"
+      }
+    },
+    {
+      "style": {
+        "key": "opaq",
+        "value": "Opaque"
+      }
+    },
+    {
+      "style": {
+        "key": "trouble",
+        "value": "Trouble"
+      }
+    },
+    {
+      "style": {
+        "key": "voil",
+        "value": "Apparence Voilé"
+      }
+    },
+    {
+      "style": {
+        "key": "limp",
+        "value": "Apparence Limpide"
+      }
+    },
+    {
+      "style": {
+        "key": "bEnv",
+        "value": "Bulles Envahissantes"
+      }
+    },
+    {
+      "style": {
+        "key": "bLeg",
+        "value": "Bulles Légères"
+      }
+    },
+    {
+      "style": {
+        "key": "mSol",
+        "value": "Mousse Consistante"
+      }
+    },
+    {
+      "style": {
+        "key": "mLeg",
+        "value": "Mousse Légère et Futile"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "root": [
+    {
+      "profil": {
+        "username": "admin",
+        "nom": "admin",
+        "prenom": "admin",
+        "biographie": "admin of the admin",
+        "mail": "admin@admin.net",
+        "mdp": "1xab0I5lrsVUtv+wVZWerQ==",
+        "dateN": "16660101",
+        "loc": "aq",
+        "allergies": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "favoris": [],
+        "pdp": "data/img/profil/admin.png",
+        "isAdmin": true
+      }
+    },
+    {
+      "profil": {
+        "username": "roro",
+        "nom": "OLIVIER",
+        "prenom": "Romain",
+        "biographie": "J'ai une sublime description. Et pour l'instant je pleure pas vu que j'ai pas encore eu 0 pour ce projet ",
+        "mail": "rom1@mail.com",
+        "mdp": "kquIlak2As5sQlQkndz7EQ==",
+        "dateN": "20011016",
+        "loc": "jp",
+        "allergies": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "favoris": [],
+        "pdp": "data/img/profil/roro.png",
+        "isAdmin": true
+      }
+    },
+    {
+      "profil": {
+        "username": "balkaLovForever",
+        "nom": "balkany",
+        "prenom": "patoche",
+        "biographie": "Vous n'avez pas encore de description",
+        "mail": "levallois2021@gmail.com",
+        "mdp": "fbkoFfVdQipzS/7/tMuziQ==",
+        "dateN": "19751010",
+        "loc": "fr",
+        "allergies": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "favoris": [],
+        "isAdmin": false,
+        "pdp": "data/logo.png"
+      }
+    }
+  ]
+}

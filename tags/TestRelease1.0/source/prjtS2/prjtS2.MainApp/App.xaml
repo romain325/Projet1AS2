@@ -1,0 +1,59 @@
+﻿<Application x:Class="prjtS2.MainApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:prjtS2.MainApp" xmlns:tools="clr-namespace:prjtS2.MainApp.Tools"
+             StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Ressource/RessourceDictionnary.xaml" />
+                <ResourceDictionary Source="Ressource/DataTemplateDictionnary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <Style TargetType="local:ModifProfil">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+            
+            <Style TargetType="local:Profil">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+
+            <Style TargetType="local:LaunchAdult">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+
+            <Style TargetType="local:RechercheBiere">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+
+            <Style TargetType="local:Biere">
+                <Setter Property="Background" Value="{StaticResource PopUpBG}"/>
+            </Style>
+
+            <Style TargetType="local:Brasserie">
+                <Setter Property="Background" Value="{StaticResource PopUpBG}"/>
+            </Style>
+
+            <Style TargetType="local:RechBrasserie">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+
+            <Style TargetType="local:Decouverte">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+
+            <Style TargetType="local:HubLecon">
+                <Setter Property="Background" Value="{StaticResource MenuBG}"/>
+            </Style>
+
+            <tools:StringValueConverter x:Key="StringToLow"/>
+            <tools:CollectionToStringConverter x:Key="CollecToString" />
+            <tools:ArrayMultiValueConverter x:Key="ArrayMultiValConver" />
+            <tools:UriToBitMapConverter x:Key="UriToBitmapConver" />
+        </ResourceDictionary>
+
+        
+    </Application.Resources>
+</Application>
