@@ -1,0 +1,90 @@
+{
+  "root": [
+    {
+      "biere": {
+        "name": "make them suffer",
+        "desc": "Nan jsuis pas bizarre c'est le nom d'un tres bon groupe, je ocnseille drown with me et erase me",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 12.0,
+        "prix": 15.0,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": false
+        },
+        "apparence": {
+          "couleur": "ambre",
+          "styles": [
+            "benv"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "ble"
+          ],
+          "types": [
+            "lambic",
+            "triple"
+          ],
+          "spec": [
+            "sake"
+          ],
+          "aromes": [
+            "fruit"
+          ]
+        },
+        "image": [
+          "",
+          "",
+          ""
+        ],
+        "others": "j'ai faim"
+      }
+    },
+    {
+      "biere": {
+        "name": "binsoiRzef",
+        "desc": "Masi enfin joseé",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 2.3,
+        "prix": 1.2,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": false
+        },
+        "apparence": {
+          "couleur": "blonc",
+          "styles": [
+            "bleg",
+            "limp"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "test"
+          ],
+          "types": [
+            "lager"
+          ],
+          "spec": [
+            "fut_chene"
+          ],
+          "aromes": [
+            "bois"
+          ]
+        },
+        "image": [
+          "",
+          "",
+          ""
+        ],
+        "others": ""
+      }
+    }
+  ]
+}

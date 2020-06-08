@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>prjtS2.MainApp</ActiveDebugProfile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AdminPanel\Add\AddBeerPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Add\AddBreweryPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Add\AddLessonPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Add\AddRessourcePanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\AdminPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Proposition\GestionPropBeer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Proposition\GestionPropBrew.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Remove\RemoveBeer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Remove\RemoveBrewery.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel\Remove\RemoveLesson.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Biere\Biere.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bloc\BlocInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Brasserie\brasserie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionProfil\connexion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionProfil\creaCompteConnaisseur.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Decouverte\decouverte.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bloc\ElemDecouverte.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Lecon\hubLecon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="launchAdult.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Lecon\lecon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionProfil\ModifProfil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionProfil\nouveauCompte.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Biere\NvlBiere.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Brasserie\nvlBrasserie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GestionProfil\profil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Brasserie\rechBrasserie.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Biere\RechercheBière.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AdminPanel\Add\AddBeerPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Add\AddBreweryPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Add\AddLessonPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Add\AddRessourcePanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Proposition\GestionPropBeer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Proposition\GestionPropBrew.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Remove\RemoveBeer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Remove\RemoveBrewery.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel\Remove\RemoveLesson.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Biere\Biere.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bloc\BlocInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Brasserie\brasserie.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionProfil\connexion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionProfil\creaCompteConnaisseur.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Decouverte\decouverte.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bloc\ElemDecouverte.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Lecon\hubLecon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="launchAdult.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Lecon\lecon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionProfil\ModifProfil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionProfil\nouveauCompte.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Biere\NvlBiere.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Brasserie\nvlBrasserie.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GestionProfil\profil.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Brasserie\rechBrasserie.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Biere\RechercheBière.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\DataTemplateDictionnary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ressource\RessourceDictionnary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

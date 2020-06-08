@@ -15,13 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0B936028EA284FAC8ECF985E1AB7A117"
+        "MsmKey" = "8:_0838C0AFB7984C0DA076C06C1227FB9F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3D0F3B9AFEA94A3D9464955448E69D26"
+        "MsmKey" = "8:_0B936028EA284FAC8ECF985E1AB7A117"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -199,7 +199,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BeerSearchApp"
         "ProductCode" = "8:{C70591F2-5987-4632-92BE-FEE9A7B610E0}"
-        "PackageCode" = "8:{95F8EBD4-A383-4FED-92BB-9AFB4629B8F1}"
+        "PackageCode" = "8:{9C89F65B-6941-40E0-9253-EC5B0A842FCE}"
         "UpgradeCode" = "8:{9C2CBE7A-8765-4C95-B2A5-4E07DFCA68CE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -212,11 +212,11 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:BeerSearchApp"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:roolivier1@etu.uca.fr"
+        "ARPCONTACT" = "8:Augustin/Romain"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Beer/Brewery Master Detail made for 1st y DUT project"
         "ARPURLINFOABOUT" = "8:https://romain325.github.io/romind/"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_0B936028EA284FAC8ECF985E1AB7A117"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -319,7 +319,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8C01375A61F34F72A9E689CF2F243ED2"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B4C74770C8E94D56B8D24FC7739E09D0"
             {
             "Name" = "8:BeerApp"
             "Arguments" = "8:"
@@ -327,7 +327,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_3D0F3B9AFEA94A3D9464955448E69D26"
+            "Target" = "8:_0838C0AFB7984C0DA076C06C1227FB9F"
             "Folder" = "8:_92EF853C45AD4CBE9F13590F030A76C2"
             "WorkingFolder" = "8:_E0562A94CCF34B2E99A7382025A82273"
             "Icon" = "8:_0B936028EA284FAC8ECF985E1AB7A117"
@@ -732,9 +732,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3D0F3B9AFEA94A3D9464955448E69D26"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0838C0AFB7984C0DA076C06C1227FB9F"
             {
-            "SourcePath" = "8:..\\..\\prjtS2.MainApp\\obj\\Debug\\netcoreapp3.1\\prjtS2.MainApp.exe"
+            "SourcePath" = "8:..\\..\\prjtS2.MainApp\\obj\\Release\\netcoreapp3.1\\prjtS2.MainApp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E0562A94CCF34B2E99A7382025A82273"
@@ -752,7 +752,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:Debug|Any CPU"
+            "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{3023D6DD-D581-405E-9AC2-EE65C78BCF2D}"
             "ShowKeyOutput" = "11:TRUE"

@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="prjtS2.MainApp.AdminPanel.AddBeerPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prjtS2.MainApp.AdminPanel"
+             mc:Ignorable="d" 
+             x:Name="AddBeer"
+             d:DesignHeight="450" d:DesignWidth="1200">
+    <StackPanel>
+        <TextBlock Text="Nouvelle Bière" TextAlignment="Center" FontSize="45" Style="{StaticResource descTitre}"/>
+
+        <DockPanel HorizontalAlignment="Stretch">
+            <StackPanel  DockPanel.Dock="Left">
+                <TextBox Style="{StaticResource placeHolder}" Tag="TITRE" MinWidth="250" FontSize="30" Margin="0 0 20 0" x:Name="title"/>
+                <TextBox Style="{StaticResource placeHolder}" Tag="Image Link (Internet Link Ending in Jpg)" Margin="0 15 0 0" x:Name="img" TextWrapping="Wrap" MaxWidth="150"/>
+                <TextBox Style="{StaticResource placeHolder}" Tag="Image Link (Internet Link Ending in Jpg)" Margin="0 15 0 0" x:Name="img2" TextWrapping="Wrap" MaxWidth="150"/>
+                <TextBox Style="{StaticResource placeHolder}" Tag="Image Link (Internet Link Ending in Jpg)" Margin="0 15 0 0" x:Name="img3" TextWrapping="Wrap" MaxWidth="150"/>
+            </StackPanel>
+
+            <TextBox Style="{StaticResource multiLinePlaceHolder}" Tag="CONTENU" DockPanel.Dock="Right" MinWidth="600" MinHeight="200" TextWrapping="Wrap" x:Name="content" Margin="20 0 0 0"/>
+            <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="200">
+                <CheckBox Content="Has Alcool" IsChecked="True" x:Name="alcool"/>
+                <CheckBox Content="Has Gluten" IsChecked="True" x:Name="gluten"/>
+                <CheckBox Content="Has Levure" IsChecked="True" x:Name="levure"/>
+                <TextBox Style="{StaticResource placeHolder}" Tag="Degrées" x:Name="degree" Margin="0 25 0 0"/>
+                <TextBox Style="{StaticResource placeHolder}" Tag="Prix Moyen Conseillé" x:Name="prix"/>
+                <Label Margin="0 25 0 0">Brasserie:</Label>
+                <ComboBox x:Name="brass" />
+            </StackPanel>
+        </DockPanel>
+
+        <WrapPanel Margin="0 50 0 0">
+            <StackPanel>
+                <Label>Couleur:</Label>
+                <ComboBox  x:Name="couleur" Width="150" Margin="10"/> 
+            </StackPanel>
+            <WrapPanel Height="150">
+                <StackPanel Margin="10">
+                    <Label>Styles:</Label>
+                    <ComboBox x:Name="styles" Width="150"/>
+                    <TextBlock Text="{Binding Styles,ElementName=AddBeer, Converter={StaticResource CollecToString}}" Height="125"/>
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Width="25" Height="25" Content="+" FontSize="15" x:Name="stylesBtn" Click="Button_Click" />
+            </WrapPanel>
+
+            <WrapPanel>
+                <StackPanel Margin="10">
+                    <Label>Cereales:</Label>
+                    <ComboBox x:Name="cereales" Width="150"/>
+                    <TextBlock Text="{Binding Cereales,ElementName=AddBeer, Converter={StaticResource CollecToString}}" />
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Width="25" Height="25" Content="+" FontSize="15" x:Name="cerealeBtn" Click="Button_Click" />
+            </WrapPanel>
+
+            <WrapPanel>
+                <StackPanel Margin="10">
+                    <Label>Types:</Label>
+                    <ComboBox x:Name="types" Width="150"/>
+                    <TextBlock Text="{Binding TypesB,ElementName=AddBeer, Converter={StaticResource CollecToString}}" />
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Width="25" Height="25" Content="+" FontSize="15" x:Name="typesBtn" Click="Button_Click" />
+            </WrapPanel>
+
+            <WrapPanel>
+                <StackPanel Margin="10">
+                    <Label>Specificités:</Label>
+                    <ComboBox x:Name="spec" Width="150"/>
+                    <TextBlock Text="{Binding Specs,ElementName=AddBeer, Converter={StaticResource CollecToString}}" />
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Width="25" Height="25" Content="+" FontSize="15" x:Name="specsBtn" Click="Button_Click" />
+            </WrapPanel>
+
+            <WrapPanel>
+                <StackPanel Margin="10">
+                    <Label>Aromes:</Label>
+                    <ComboBox x:Name="aromes" Width="150"/>
+                    <TextBlock Text="{Binding Aromes,ElementName=AddBeer, Converter={StaticResource CollecToString}}" />
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignFloatingActionDarkButton}" Width="25" Height="25" Content="+" FontSize="15" x:Name="aromesBtn" Click="Button_Click"/>
+            </WrapPanel>
+
+        </WrapPanel>
+
+        <Button x:Name="valide"  Content="Submit" Click="valide_Click" DockPanel.Dock="Bottom" Margin="50" />
+
+        <TextBlock Text="{Binding Progress, ElementName=NewLesson}" FontSize="20" TextAlignment="Center" x:Name="prog" Visibility="Hidden"/>
+        <ProgressBar Height="15" Margin="50" Value="{Binding Progress, ElementName=NewLesson}" Visibility="Hidden" x:Name="bar"/>
+    </StackPanel>
+</UserControl>

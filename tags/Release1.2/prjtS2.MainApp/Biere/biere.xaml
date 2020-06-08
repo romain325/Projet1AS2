@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="prjtS2.MainApp.Biere"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prjtS2.MainApp" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             x:Name="BiereDetail"
+             d:DesignHeight="700" d:DesignWidth="800">
+
+        
+    <ScrollViewer>
+        <StackPanel DataContext="{Binding BeerVal,ElementName=BiereDetail}">
+            <Grid MaxHeight="500">
+                <!--Banniere du HAUT: photo, nom et boutons-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*" />
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <Image Source="{Binding Images[0], Converter={StaticResource UriToBitmapConver}}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"/>
+                <Viewbox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2">
+                    <TextBlock Text="{Binding Nom}" FontFamily="{DynamicResource defaultTitleFontFamily}"/>
+                </Viewbox>
+                <Image Source="{Binding Images[1], Converter={StaticResource UriToBitmapConver}}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+                <Image Source="{Binding Images[2], Converter={StaticResource UriToBitmapConver}}" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
+
+                <Grid Grid.Column="3" Grid.Row="0" Grid.RowSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Viewbox Grid.Row="0">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Note}"/>
+                            <TextBlock Text="/100"/>
+                        </StackPanel>
+                    </Viewbox>
+                    <StackPanel  Grid.Row="1" >
+                        <TextBlock Text="Ta note:"/>
+                        <TextBox x:Name="PersonalMark" Text="Ici!"/>
+                        <Button Style="{DynamicResource MaterialDesignFloatingActionMiniButton}" Content="Note!" Click="NoteProduit" Cursor="Hand"/>
+                    </StackPanel>
+                </Grid>
+
+                <Button Style="{DynamicResource MaterialDesignFloatingActionLightButton}" Content="{materialDesign:PackIcon Kind=Star, Size=25}" Grid.Column="3" Grid.Row="2" x:Name="fav" Click="fav_Click"/>
+            </Grid>
+
+            <!--Affichage description-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="150" Width="0.2*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition MinWidth="150" Width="0.2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Style="{DynamicResource descTitre}" Text="Description" />
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Description}"/>
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="1">LOCALISATION</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Row="1" Grid.Column="1" Text="{Binding Loc}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Column="2" Grid.Row="1">TYPES</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="3" Grid.Row="1" Text="{Binding Gout.Types, Converter={StaticResource CollecToString}}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="3">AROME</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="1" Grid.Row="3" Text="{Binding Gout.Aromes, Converter={StaticResource CollecToString}}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="3" Grid.Column="2">COULEUR</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="3" Grid.Row="3" Text="{Binding Apparence.couleur}"/>
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="4" Grid.Column="0">CEREALES</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="1" Grid.Row="4" Text="{Binding Gout.Cereales, Converter={StaticResource CollecToString}}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="4" Grid.Column="2">APPARENCE</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="3" Grid.Row="4" Text="{Binding Apparence.Styles , Converter={StaticResource CollecToString}}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="5" Grid.Column="0">SPECIFICITES</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="1" Grid.Row="5" Text="{Binding Gout.Specificites, Converter={StaticResource CollecToString}}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="5" Grid.Column="2">PRIX MOYEN</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="3" Grid.Row="5" Text="{Binding PrixMoyen}" />
+
+                <TextBlock Style="{DynamicResource descTitre}" Grid.Row="6" Grid.Column="0">DEGREES</TextBlock>
+                <TextBlock Style="{DynamicResource descCont}" Grid.Column="1" Grid.Row="6" Text="{Binding Degrees}" />
+            </Grid>
+
+        </StackPanel>
+    </ScrollViewer>
+
+
+</UserControl>

@@ -1,0 +1,269 @@
+{
+  "root": [
+    {
+      "biere": {
+        "name": "Random Winter Stout",
+        "desc": "Random Stout value",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 8.7,
+        "prix": 5.4,
+        "brasserie": "duvel moortgat",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": false
+        },
+        "apparence": {
+          "couleur": "noir",
+          "styles": [
+            "trouble",
+            "benv",
+            "voil"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "sorgho",
+            "orge",
+            "mil"
+          ],
+          "types": [
+            "winterale"
+          ],
+          "spec": [
+            "fut_chene"
+          ],
+          "aromes": [
+            "caramel",
+            "sucre",
+            "bois"
+          ]
+        },
+        "image": [
+          "data/logo.png",
+          "data/logo.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "Test Value",
+        "desc": "I'm a test value",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 8.2,
+        "prix": 10.3,
+        "brasserie": "fischer",
+        "allergenes": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "apparence": {
+          "couleur": "brune",
+          "styles": [
+            "opaq"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "na"
+          ],
+          "types": [
+            "triple"
+          ],
+          "spec": [
+            "fermhaute"
+          ],
+          "aromes": [
+            "coriande",
+            "sucre"
+          ]
+        },
+        "image": [
+          "data/logo.png",
+          "data/logo.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "Desperados",
+        "desc": "Tout le monde la connait et franchement ca pique de dire que c'est une biere parceque c'est un melange A BASE de biere\r\nElle est sorti en 1995",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 5.9,
+        "prix": 2.3,
+        "brasserie": "heineken",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "translucide",
+          "styles": [
+            "orange",
+            "limp"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "na"
+          ],
+          "types": [
+            "ale"
+          ],
+          "spec": [
+            "na"
+          ],
+          "aromes": [
+            "na"
+          ]
+        },
+        "image": [
+          "data/img/biere/desperados1.png",
+          "data/img/biere/desperados2.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "La Goudale de Noel",
+        "desc": "Autrefois, les bières étaient confectionnées au rythme des saisons. C'est de cette longue histoire que les brasseurs de Gayant ont hérité leur méthode de brassage pour cette Goudale de Noël.\r\n Ce sont entre autre les houblons Target, Tettnang et Strisselspalt qui entrent dans sa composition, nous offrant ainsi une belle complexité aromatique.\r\n\r\nCette bière ambrée à la robe orangée est surmontée d'une belle mousse blanche persistante. Au nez, les arômes dévoilent de belles notes de caramel, d'épices et de malt légèrement grillé. \r\nLa bouche, légèrement douce, met en avant des saveurs finement torréfiées et fruitées. Une touche de levure est également perceptible. \r\n\r\nCette Goudale de Noël nous montre à quel point les brasseurs français peuvent proposer d'excellentes bières de noël !",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 7.2,
+        "prix": 4.5,
+        "brasserie": "goudale",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "ambre",
+          "styles": [
+            "orange",
+            "msol"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "maltcaramel",
+            "na"
+          ],
+          "types": [
+            "winterale",
+            "bforte"
+          ],
+          "spec": [
+            "epice"
+          ],
+          "aromes": [
+            "caramel"
+          ]
+        },
+        "image": [
+          "data/img/biere/la goudale de noel1.png",
+          "data/img/biere/la goudale de noel2.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "La Goudale",
+        "desc": "Crée en 1994, la Goudale est une biere forte et de caractère.\r\nVrai fierté de la culture Française, celle-ci est produite dans le Nord Pas de Calais\r\nD'après son étiquette, la Goudale tire son nom d'un élément historique : « Au xive siècle, les bonnes bières étaient appelées Goudale, Goudalle ou Good Ale1. \r\nElles se vendaient deux deniers le pot, chez un marchand nommé le Goudalier. »\r\nOn lui attribue souvent le titre de Biere de Garde, une bière française de Fermentation Haute",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 7.2,
+        "prix": 2.4,
+        "brasserie": "goudale",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "blonc",
+          "styles": [
+            "dore",
+            "limp"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "maltcaramel",
+            "maltpale",
+            "orge",
+            "ble",
+            "riz"
+          ],
+          "types": [
+            "bforte"
+          ],
+          "spec": [
+            "fermhaute"
+          ],
+          "aromes": [
+            "coriande",
+            "amer"
+          ]
+        },
+        "image": [
+          "data/img/biere/la goudale1.png",
+          "data/img/biere/la goudale2.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "biere": {
+        "name": "Delirium Argentum",
+        "desc": "Bon c'est just un test",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "degree": 3.5,
+        "prix": 4.3,
+        "brasserie": "oui",
+        "allergenes": {
+          "alcool": true,
+          "gluten": true,
+          "levure": true
+        },
+        "apparence": {
+          "couleur": "blonc",
+          "styles": [
+            "limp"
+          ]
+        },
+        "gout": {
+          "cereales": [
+            "houblon",
+            "mais",
+            "ble"
+          ],
+          "types": [
+            "ipa"
+          ],
+          "spec": [
+            "sake"
+          ],
+          "aromes": [
+            "bois"
+          ]
+        },
+        "image": [
+          "data/img/biere/delirium argentum1.png",
+          "data/img/biere/delirium argentum2.png",
+          "data/logo.png"
+        ]
+      }
+    }
+  ]
+}
