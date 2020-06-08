@@ -15,10 +15,8 @@ namespace prjtS2.MainApp.AdminPanel
     /// </summary>
     public partial class AddBeerPanel : UserControl, INotifyPropertyChanged
     {
-        /// <summary>
-        /// /Reference to an instance of the manager
-        /// </summary>
-        Managing.Manager Mng => Managing.Manager.Instance;
+        public int _Progress;
+
         public AddBeerPanel()
         {
             InitializeComponent();
@@ -28,13 +26,12 @@ namespace prjtS2.MainApp.AdminPanel
 
         }
 
-
-
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// New beer Styles
+        /// New beer Taste
         /// </summary>
-        public List<FunctLibrary.Ressources.Style> Styles { get; } = new List<FunctLibrary.Ressources.Style>();
+        public List<Arome> Aromes { get; } = new List<Arome>();
 
         /// <summary>
         /// New beer Cereales
@@ -42,9 +39,22 @@ namespace prjtS2.MainApp.AdminPanel
         public List<Cereale> Cereales { get; } = new List<Cereale>();
 
         /// <summary>
-        /// New beer Type
+        /// Progress Bar value
         /// </summary>
-        public List<TypeBiere> TypesB { get; } = new List<TypeBiere>();
+        public int Progress
+        {
+            get => _Progress;
+            set
+            {
+                if (_Progress + 1 >= 100)
+                {
+                    _Progress = 0;
+                    FileFinished();
+                }
+                _Progress += value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         /// New beer Specificities
@@ -52,9 +62,96 @@ namespace prjtS2.MainApp.AdminPanel
         public List<Specificite> Specs { get; } = new List<Specificite>();
 
         /// <summary>
-        /// New beer Taste
+        /// New beer Styles
         /// </summary>
-        public List<Arome> Aromes { get; } = new List<Arome>();
+        public List<FunctLibrary.Ressources.Style> Styles { get; } = new List<FunctLibrary.Ressources.Style>();
+
+        /// <summary>
+        /// New beer Type
+        /// </summary>
+        public List<TypeBiere> TypesB { get; } = new List<TypeBiere>();
+
+        /// <summary>
+        /// /Reference to an instance of the manager
+        /// </summary>
+        Managing.Manager Mng => Managing.Manager.Instance;
+        public void ReturnToDefaultValue()
+        {
+            title.Text = "";
+            content.Text = "";
+            degree.Text = "";
+            prix.Text = "";
+            img.Text = "";
+            img2.Text = "";
+            img3.Text = "";
+
+            couleur.SelectedIndex = 0;
+            brass.SelectedIndex = 0;
+
+            Styles.Clear();
+            Aromes.Clear();
+            Specs.Clear();
+            Cereales.Clear();
+            TypesB.Clear();
+
+            bar.Visibility = Visibility.Hidden;
+            bar.Value = 0;
+            prog.Text = "";
+
+            OnPropertyChanged(nameof(couleur));
+            OnPropertyChanged(nameof(styles));
+            OnPropertyChanged(nameof(cereales));
+            OnPropertyChanged(nameof(types));
+            OnPropertyChanged(nameof(spec));
+            OnPropertyChanged(nameof(aromes));
+            OnPropertyChanged(nameof(brass));
+        }
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Add the selected value to the list of values of the new Beer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            switch ((sender as Button).Name)
+            {
+                case "stylesBtn":
+                    Styles.Add(new FunctLibrary.Ressources.Style(styles.SelectedItem.ToString()));
+                    OnPropertyChanged(nameof(Styles));
+                    break;
+                case "cerealeBtn":
+                    Cereales.Add(new FunctLibrary.Ressources.Cereale(cereales.SelectedItem.ToString()));
+                    OnPropertyChanged(nameof(Cereales));
+                    break;
+                case "typesBtn":
+                    TypesB.Add(new FunctLibrary.Ressources.TypeBiere(types.SelectedItem.ToString()));
+                    OnPropertyChanged(nameof(TypesB));
+                    break;
+                case "specsBtn":
+                    Specs.Add(new FunctLibrary.Ressources.Specificite(spec.SelectedItem.ToString()));
+                    OnPropertyChanged(nameof(Specs));
+                    break;
+                case "aromesBtn":
+                    Aromes.Add(new FunctLibrary.Ressources.Arome(aromes.SelectedItem.ToString()));
+                    OnPropertyChanged(nameof(Aromes));
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Append when all the downloads are done
+        /// </summary>
+        private void FileFinished()
+        {
+            prog.Text = "Finished!!";
+            bar.Value = 100;
+        }
 
         /// <summary>
         /// Inititate all the ComboBox ItemsSource
@@ -68,6 +165,33 @@ namespace prjtS2.MainApp.AdminPanel
             spec.ItemsSource = Ressource.Parameter.DICO_SPEC.Keys;
             aromes.ItemsSource = Ressource.Parameter.DICO_AROMES.Keys;
             brass.ItemsSource = FunctLibrary.Library.DICO_BRASSERIES.Keys;
+        }
+
+        /// <summary>
+        /// If the EvntHub adivse of a RessourceChanged, ReInit the ItemsSources
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnRessourceChanged(object sender, EventArgs e)
+        {
+            InitItemSource();
+            OnPropertyChanged(nameof(couleur));
+            OnPropertyChanged(nameof(styles));
+            OnPropertyChanged(nameof(cereales));
+            OnPropertyChanged(nameof(types));
+            OnPropertyChanged(nameof(spec));
+            OnPropertyChanged(nameof(aromes));
+            OnPropertyChanged(nameof(brass));
+        }
+
+        /// <summary>
+        /// Download Status Changed, Set the Progress bar value
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void StatusChanged(object sender, DownloadProgressChangedEventArgs args)
+        {
+            Progress = args.ProgressPercentage / 3;
         }
 
         /// <summary>
@@ -159,97 +283,13 @@ namespace prjtS2.MainApp.AdminPanel
             Mng.DataManager.ProduitDataMng.BeerData.AddOneToFile(l);
             Mng.EventHub.OnBeerDicChanged(this);
             Mng.EventHub.OnPropBeerDicChanged(this);
+
+
+            MessageBox.Show("Votre bière a bien été ajouté!");
+
             Mng.Navigation.NavigateTo("adminPanel");
 
-        }
-
-
-        public int _Progress;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// Progress Bar value
-        /// </summary>
-        public int Progress
-        {
-            get => _Progress;
-            set
-            {
-                if (_Progress + 1 >= 100)
-                {
-                    _Progress = 0;
-                    FileFinished();
-                }
-                _Progress += value;
-                OnPropertyChanged();
-            }
-        }
-
-        /// <summary>
-        /// Download Status Changed, Set the Progress bar value
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void StatusChanged(object sender, DownloadProgressChangedEventArgs args)
-        {
-            Progress = args.ProgressPercentage / 3;
-        }
-
-        /// <summary>
-        /// Append when all the downloads are done
-        /// </summary>
-        private void FileFinished()
-        {
-            prog.Text = "Finished!!";
-            bar.Value = 100;
-        }
-
-        /// <summary>
-        /// If the EvntHub adivse of a RessourceChanged, ReInit the ItemsSources
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnRessourceChanged(object sender, EventArgs e)
-        {
-            InitItemSource();
-        }
-
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        /// <summary>
-        /// Add the selected value to the list of values of the new Beer
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            switch((sender as Button).Name)
-            {
-                case "stylesBtn":
-                    Styles.Add(new FunctLibrary.Ressources.Style(styles.SelectedItem.ToString()));
-                    OnPropertyChanged(nameof(Styles));
-                    break;
-                case "cerealeBtn":
-                    Cereales.Add(new FunctLibrary.Ressources.Cereale(cereales.SelectedItem.ToString()));
-                    OnPropertyChanged(nameof(Cereales));
-                    break;
-                case "typesBtn":
-                    TypesB.Add(new FunctLibrary.Ressources.TypeBiere(types.SelectedItem.ToString()));
-                    OnPropertyChanged(nameof(TypesB));
-                    break;
-                case "specsBtn":
-                    Specs.Add(new FunctLibrary.Ressources.Specificite(spec.SelectedItem.ToString()));
-                    OnPropertyChanged(nameof(Specs));
-                    break;
-                case "aromesBtn":
-                    Aromes.Add(new FunctLibrary.Ressources.Arome(aromes.SelectedItem.ToString()));
-                    OnPropertyChanged(nameof(Aromes));
-                    break;
-            }
+            ReturnToDefaultValue();
         }
     }
 }

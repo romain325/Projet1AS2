@@ -25,15 +25,116 @@ namespace prjtS2.MainApp
     public partial class NvlBrasserie : UserControl, INotifyPropertyChanged
     {
         /// <summary>
-        /// /Reference to an instance of the manager
+        /// Brewery Dependency Property
         /// </summary>
-        Managing.Manager Mng => Managing.Manager.Instance;
+        public static readonly DependencyProperty BreweryNameProperty = DependencyProperty.Register("BreweryPropName", typeof(string), typeof(NvlBrasserie),
+           new PropertyMetadata(null, new PropertyChangedCallback(OnDepPropChanged)));
 
+        public int _Progress;
 
         public NvlBrasserie()
         {
             InitializeComponent();
             country.ItemsSource = Ressource.Parameter.CountryArrays.Values;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Brewery Name
+        /// </summary>
+        public string BreweryPropName
+        {
+            get
+            {
+                return GetValue(BreweryNameProperty) as string;
+            }
+            set
+            {
+                SetValue(BreweryNameProperty, value);
+            }
+        }
+
+        /// <summary>
+        /// Brewery value calculated frm brewery name
+        /// </summary>
+        public FunctLibrary.Produit.PropBrasserie BreweryVal
+        {
+            get
+            {
+                if (BreweryPropName != null)
+                {
+                    return Library.PROP_BRASSERIES[BreweryPropName];
+                }
+                else { return null; }
+            }
+        }
+
+        /// <summary>
+        /// Progress bar value
+        /// </summary>
+        public int Progress
+        {
+            get => _Progress;
+            set
+            {
+                if (_Progress + 1 >= 100)
+                {
+                    _Progress = 0;
+                    FileFinished();
+                }
+                _Progress += value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// /Reference to an instance of the manager
+        /// </summary>
+        Managing.Manager Mng => Managing.Manager.Instance;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private static void OnDepPropChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            NvlBrasserie b = d as NvlBrasserie;
+            b.OnPropertyChanged(nameof(BreweryVal));
+        }
+
+        /// <summary>
+        /// Files has finish download
+        /// </summary>
+        private void FileFinished()
+        {
+            prog.Text = "Finished!!";
+            bar.Value = 100;
+        }
+
+        void ReinitDefaultValue()
+        {
+            title.Text = "";
+            content.Text = "";
+            img.Text = "";
+            img2.Text = "";
+            img3.Text = "";
+
+            country.SelectedIndex = -1;
+
+            bar.Visibility = Visibility.Hidden;
+            bar.Value = 0;
+            prog.Text = "";
+        }
+
+        /// <summary>
+        /// Download status changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void StatusChanged(object sender, DownloadProgressChangedEventArgs args)
+        {
+            Progress = args.ProgressPercentage / 3;
         }
 
         /// <summary>
@@ -67,6 +168,7 @@ namespace prjtS2.MainApp
                 Mng.DataManager.ProduitDataMng.PropBrewData.AddOneToFile(l);
                 Mng.EventHub.OnPropBrewDicChanged(this);
                 MessageBox.Show("La proposition a bien été ajouté");
+                ReinitDefaultValue();
             }
             else
             {
@@ -150,98 +252,5 @@ namespace prjtS2.MainApp
 
 
         }
-
-        public int _Progress;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Progress bar value
-        /// </summary>
-        public int Progress
-        {
-            get => _Progress;
-            set
-            {
-                if (_Progress + 1 >= 100)
-                {
-                    _Progress = 0;
-                    FileFinished();
-                }
-                _Progress += value;
-                OnPropertyChanged();
-            }
-        }
-
-        /// <summary>
-        /// Download status changed
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void StatusChanged(object sender, DownloadProgressChangedEventArgs args)
-        {
-            Progress = args.ProgressPercentage / 3;
-        }
-
-        /// <summary>
-        /// Files has finish download
-        /// </summary>
-        private void FileFinished()
-        {
-            prog.Text = "Finished!!";
-            bar.Value = 100;
-        }
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-
-
-
-
-        /// <summary>
-        /// Brewery Dependency Property
-        /// </summary>
-        public static readonly DependencyProperty BreweryNameProperty = DependencyProperty.Register("BreweryPropName", typeof(string), typeof(NvlBrasserie),
-           new PropertyMetadata(null, new PropertyChangedCallback(OnDepPropChanged)));
-
-        /// <summary>
-        /// Brewery Name
-        /// </summary>
-        public string BreweryPropName
-        {
-            get
-            {
-                return GetValue(BreweryNameProperty) as string;
-            }
-            set
-            {
-                SetValue(BreweryNameProperty, value);
-            }
-        }
-
-        /// <summary>
-        /// Brewery value calculated frm brewery name
-        /// </summary>
-        public FunctLibrary.Produit.PropBrasserie BreweryVal
-        {
-            get
-            {
-                if (BreweryPropName != null)
-                {
-                    return Library.PROP_BRASSERIES[BreweryPropName];
-                }
-                else { return null; }
-            }
-        }
-
-        private static void OnDepPropChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            NvlBrasserie b = d as NvlBrasserie;
-            b.OnPropertyChanged(nameof(BreweryVal));
-        }
-
     }
 }

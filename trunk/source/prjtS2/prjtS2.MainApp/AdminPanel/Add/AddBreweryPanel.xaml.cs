@@ -14,15 +14,74 @@ namespace prjtS2.MainApp.AdminPanel
     /// </summary>
     public partial class AddBreweryPanel : UserControl , INotifyPropertyChanged
     {
-        /// <summary>
-        /// /Reference to an instance of the manager
-        /// </summary>
-        Managing.Manager Mng => Managing.Manager.Instance;
+        public int _Progress;
 
         public AddBreweryPanel()
         {
             InitializeComponent();
             country.ItemsSource = Ressource.Parameter.CountryArrays.Values;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// Progress Bar value
+        /// </summary>
+        public int Progress
+        {
+            get => _Progress;
+            set
+            {
+                if (_Progress + 1 >= 100)
+                {
+                    FileFinished();
+                }
+                _Progress += value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// /Reference to an instance of the manager
+        /// </summary>
+        Managing.Manager Mng => Managing.Manager.Instance;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Append when all the downloads are done
+        /// </summary>
+        private void FileFinished()
+        {
+            prog.Text = "Finished!!";
+            bar.Value = 100;
+        }
+
+        void ReinitDefaultValue()
+        {
+            title.Text = "";
+            content.Text = "";
+            img.Text = "";
+            img2.Text = "";
+            img3.Text = "";
+
+            country.SelectedIndex = -1;
+
+            bar.Visibility = Visibility.Hidden;
+            bar.Value = 0;
+            prog.Text = "";
+        }
+
+        /// <summary>
+        /// Download Status Changed, Set the Progress bar value
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void StatusChanged(object sender, DownloadProgressChangedEventArgs args)
+        {
+            Progress = args.ProgressPercentage / 3;
         }
 
         /// <summary>
@@ -105,54 +164,13 @@ namespace prjtS2.MainApp.AdminPanel
             Mng.DataManager.ProduitDataMng.BreweryData.AddOneToFile(l);
             Mng.EventHub.OnBreweryDicChanged(this);
 
+            ReinitDefaultValue();
+            MessageBox.Show("Votre brasserie a bien été ajouté");
+
+            Mng.Navigation.NavigateTo("adminPanel");
 
 
-        }
 
-        public int _Progress;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        /// <summary>
-        /// Progress Bar value
-        /// </summary>
-        public int Progress
-        {
-            get => _Progress;
-            set
-            {
-                if(_Progress+1 >= 100)
-                {
-                    FileFinished();
-                }
-                _Progress += value;
-                OnPropertyChanged();
-            }
-        }
-
-        /// <summary>
-        /// Download Status Changed, Set the Progress bar value
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
-        private void StatusChanged(object sender, DownloadProgressChangedEventArgs args)
-        {
-            Progress = args.ProgressPercentage / 3;
-        }
-
-
-        /// <summary>
-        /// Append when all the downloads are done
-        /// </summary>
-        private void FileFinished()
-        {
-            prog.Text = "Finished!!";
-            bar.Value = 100;
-        }
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

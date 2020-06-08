@@ -17,9 +17,9 @@
                 <Button x:Name="RemoveLesson" Content="Remove Lesson" Style="{StaticResource squareButton}" Click="RemoveLesson_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
                 <Button x:Name="RemoveBeer" Content="Remove Beer" Style="{StaticResource squareButton}" Click="RemoveBeer_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
                 <Button x:Name="RemoveBrewery" Content="Remove Brewery" Style="{StaticResource squareButton}" Click="RemoveBrewery_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
-                <Button x:Name="SaveDataToZip" Content="Get A DataBackup" Style="{StaticResource squareButton}" Click="SaveDataToZip_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
                 <Button x:Name="SeePropBeer" Content="See Beer Proposition" Style="{StaticResource squareButton}" Click="NewBeerProp_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
                 <Button x:Name="SeePropBrew" Content="See Brewery Proposition" Style="{StaticResource squareButton}" Click="NewBreweryProp_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
+                <Button x:Name="SaveDataToZip" Content="Get A DataBackup" Style="{StaticResource squareButton}" Click="SaveDataToZip_Click" Width="{Binding ActualWidth, ElementName=all, Converter={StaticResource DivisionMathConverter}, ConverterParameter=4}"/>
             </WrapPanel>
         </ScrollViewer>
     </Grid>

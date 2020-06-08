@@ -3,6 +3,8 @@ using prjtS2.FunctLibrary.Produit;
 using prjtS2.FunctLibrary.Ressources;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace prjtS2.FunctLibrary
@@ -47,10 +49,6 @@ namespace prjtS2.FunctLibrary
         /// </summary>
         public static Dictionary<string, Lecon> LECON = new Dictionary<string, Lecon>();
 
-        /// <summary>
-        /// Contains all the different "Decouverte" you can find
-        /// </summary>
-        public static Dictionary<string, Decouverte> DECOUVERTE = new Dictionary<string, Decouverte>();
 
         /// <summary>
         /// Contains the differents types of blocs that can be instanciated, you can add more and update BlocInfo in the BlocAjout dedicated part
@@ -60,5 +58,6 @@ namespace prjtS2.FunctLibrary
             {Ressource.BlocType.Biere, new BlocAjout("Pas de trace de votre Bière préferé?", "Proposez la nous Ici et nous pourrons l'ajouter après vérification! (Remplisser tout les champs pour etre revu plus vite!)") },
             {Ressource.BlocType.Brasserie, new BlocAjout("Pas de trace de votre Brasserie préferé?", "Proposez la nous Ici et nous pourrons l'ajouter après vérification ! (Remplisser tout les champs pour etre revu plus vite!)") }
         };
+
     }
 }

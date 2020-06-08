@@ -199,7 +199,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:BeerSearchApp"
         "ProductCode" = "8:{C70591F2-5987-4632-92BE-FEE9A7B610E0}"
-        "PackageCode" = "8:{4294AAAE-29B5-4352-AA79-0A0919E7F709}"
+        "PackageCode" = "8:{95F8EBD4-A383-4FED-92BB-9AFB4629B8F1}"
         "UpgradeCode" = "8:{9C2CBE7A-8765-4C95-B2A5-4E07DFCA68CE}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

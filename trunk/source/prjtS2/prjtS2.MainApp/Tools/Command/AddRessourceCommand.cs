@@ -51,45 +51,48 @@ namespace prjtS2.MainApp.Tools.Command
         /// <param name="param">list of informations containing type, key, value</param>
         public void SavingRessource(object param)
         {
-            if (!CanExecute(param)) { throw new Exception("Les Arguments Données ne correspondent pas a la valeur souhaité"); }
+            if (!CanExecute(param)) { MessageBox.Show("Les Arguments Données ne correspondent pas a la valeur souhaité");return;}
 
             var tab = (object[])param;
             string key = (string)tab[0];
             string value = (string)tab[1];
             string lib = (string)tab[2];
-
-            switch(lib)
+            try
             {
-                case "Types Bieres":
-                    //Ressource.Parameter.DICO_TYPE.Add(key.ToLower(), value);
-                    Mng.DataManager.RessourceDataMng.TypeBData.AddOneToFile(new TypeBiere(key.ToLower(), value));
-                    MessageBox.Show(Ressource.Parameter.DICO_TYPE[key.ToLower()]);
-                    break;
-                case "Aromes":
-                    Mng.DataManager.RessourceDataMng.AromeData.AddOneToFile(new Arome(key.ToLower(), value));
-                    MessageBox.Show(Ressource.Parameter.DICO_AROMES[key.ToLower()]);
-                    break;
-                case "Cereales":
-                    Mng.DataManager.RessourceDataMng.CerealeData.AddOneToFile(new Cereale(key.ToLower(), value));
-                    MessageBox.Show(Ressource.Parameter.DICO_CEREALES[key.ToLower()]);
-                    break;
-                case "Specificite":
-                    Mng.DataManager.RessourceDataMng.SpecData.AddOneToFile(new Specificite(key.ToLower(), value));
-                    MessageBox.Show(Ressource.Parameter.DICO_SPEC[key.ToLower()]);
-                    break;
-                case "Style":
-                    Mng.DataManager.RessourceDataMng.StyleData.AddOneToFile(new FunctLibrary.Ressources.Style(key.ToLower(), value));
-                    MessageBox.Show(Ressource.Parameter.DICO_STYLE[key.ToLower()]);
-                    break;
-                case "Couleur":
-                    Mng.DataManager.RessourceDataMng.CouleurData.AddOneToFile(new Couleur(key.ToLower(), value));
-                    MessageBox.Show(Ressource.Parameter.DICO_COULEURS[key.ToLower()]);
-                    break;
-                default:
-                    throw new Exception("We encountered a Problem and you're data hasn't been saved, please refer to the author of the app");
+                switch (lib)
+                {
+                    case "Types Bieres":
+                        Mng.DataManager.RessourceDataMng.TypeBData.AddOneToFile(new TypeBiere(key.ToLower(), value));
+                        break;
+                    case "Aromes":
+                        Mng.DataManager.RessourceDataMng.AromeData.AddOneToFile(new Arome(key.ToLower(), value));
+                        break;
+                    case "Cereales":
+                        Mng.DataManager.RessourceDataMng.CerealeData.AddOneToFile(new Cereale(key.ToLower(), value));
+                        break;
+                    case "Specificite":
+                        Mng.DataManager.RessourceDataMng.SpecData.AddOneToFile(new Specificite(key.ToLower(), value));
+                        break;
+                    case "Style":
+                        Mng.DataManager.RessourceDataMng.StyleData.AddOneToFile(new FunctLibrary.Ressources.Style(key.ToLower(), value));
+                        break;
+                    case "Couleur":
+                        Mng.DataManager.RessourceDataMng.CouleurData.AddOneToFile(new Couleur(key.ToLower(), value));
+                        break;
+                    default:
+                        throw new Exception("We encountered a Problem and you're data hasn't been saved, please refer to the author of the app");
+                }
+                MessageBox.Show("Your parameter has been well added!!");
+                Mng.EventHub.OnRessourceDicsChanged(this);
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return;
+            }
+            
 
-            Mng.EventHub.OnRessourceDicsChanged(this);
+
 
         }
     }

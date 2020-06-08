@@ -1,6 +1,24 @@
 {
   "root": [
-     {
+    {
+      "spec": {
+        "key": "tequila",
+        "value": "Tequila"
+      }
+    },
+    {
+      "spec": {
+        "key": "epice",
+        "value": "Epicé"
+      }
+    },
+    {
+      "spec": {
+        "key": "fermhaute",
+        "value": "Fermentation Haute"
+      }
+    },
+    {
       "spec": {
         "key": "na",
         "value": "Aucune Préference"

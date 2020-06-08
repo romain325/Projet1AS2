@@ -2,6 +2,18 @@
   "root": [
     {
       "cereale": {
+        "key": "maltcaramel",
+        "value": "Malt Caramel"
+      }
+    },
+    {
+      "cereale": {
+        "key": "maltpale",
+        "value": "Malt Pâle"
+      }
+    },
+    {
+      "cereale": {
         "key": "na",
         "value": "Aucune Préference"
       }

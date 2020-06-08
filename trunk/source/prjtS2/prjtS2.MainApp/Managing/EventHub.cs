@@ -88,5 +88,19 @@ namespace prjtS2.MainApp.Managing
         {
             PropBrewDicChanged?.Invoke(sender, EventArgs.Empty);
         }
+
+
+
+        /// <summary>
+        /// Brewery Propostion Dicitonary Change event
+        /// </summary>
+        public EventHandler<EventArgs> UpdateDecouverteProp;
+        /// <summary>
+        /// Brewery Propostion Dicitonary Change event trigger
+        /// </summary>
+        public virtual void OnUpdateDecouverteProp(object sender)
+        {
+            UpdateDecouverteProp?.Invoke(sender, EventArgs.Empty);
+        }
     }
 }

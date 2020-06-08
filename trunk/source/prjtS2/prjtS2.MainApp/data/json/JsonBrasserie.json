@@ -2,84 +2,84 @@
   "root": [
     {
       "brasserie": {
-        "name": "jenpeuxervdfplus",
-        "desc": "achevez moi bordel cest pas compliqu\"",
-        "nbNote": 1,
-        "noteTotal": 50,
-        "loc": "kp",
-        "image": [
-          "data/logo.png",
-          "data/logo.png",
-          "data/logo.png"
-        ]
-      }
-    },
-    {
-      "brasserie": {
-        "name": "erssdsdf",
-        "desc": "edfd",
+        "name": "Goudale",
+        "desc": "En 1919 à Douai, quatre brasseries se réunissent pour former La grande brasserie des enfants de Gayant2. La bière sans alcool Celta est lancée en 1970, la Goudale en 1994.\r\n\r\nLe changement de nom intervient en 1995. En 2001, la brasserie de Gayant prend le contrôle de la Brasserie Vandamme, située à Ronchin, qui fabrique les bières Triple Secret des Moines, Grain d'Orge, Ambrée des Flandres, Septante 5 et Belzébuth. Renommée l'année suivante en Brasserie Grain d'Orge, celle-ci est fermée en 2005, et la fabrication est transférée à Douai.\r\n\r\nEn 2010, la famille d'Aubreby, qui possédait la brasserie depuis 1955, la revend à André Pecqueur, qui possède la Brasserie de Saint-Omer3.\r\n\r\nLe site de production s'installe à Arques en 2017 afin de se rapprocher de celui de la Brasserie de Saint-Omer, elle prend le nom de Brasserie Goudale.",
         "nbNote": 1,
         "noteTotal": 50,
         "loc": "fr",
         "image": [
-          "data/logo.png",
-          "data/logo.png",
+          "data/img/brasserie/goudale1.png",
+          "data/img/brasserie/goudale2.png",
           "data/logo.png"
         ]
       }
     },
     {
       "brasserie": {
-        "name": "Tuez moi encore et encore",
-        "desc": "jvais me pendre",
+        "name": "Fischer",
+        "desc": "La brasserie Fischer — parfois appelée brasserie du Pêcheur — est une ancienne brasserie alsacienne installée à Schiltigheim, commune voisine de Strasbourg, dans le Bas-Rhin. Fondée en 1821, elle est fermée en 2009.\r\n\r\nLa marque appartient aujourd’hui au groupe Heineken. La production de la gamme Fischer d'Heineken est désormais issue de la brasserie de l'Espérance.",
         "nbNote": 1,
         "noteTotal": 50,
-        "loc": "ai",
+        "loc": "fr",
         "image": [
-          "data/logo.png",
-          "data/logo.png",
+          "data/img/brasserie/fischer1.png",
+          "data/img/brasserie/fischer2.png",
           "data/logo.png"
         ]
       }
     },
     {
       "brasserie": {
-        "name": "EFUYDGSH moi",
-        "desc": "jvais me pendre",
+        "name": "Heineken",
+        "desc": "Heineken International /ˈɦɛi.nə.kən/ est un groupe brassicole d’origine néerlandaise fondé en 1873 par Gerard Adriaan Heineken. C’est, en 2015, le deuxième brasseur au niveau mondial, avec une part de marché en volume de 9,1 %, derrière Anheuser-Busch InBev (près de 30 % de parts de marché après le rachat de SABMiller en 2015) et devant le Danois Carlsberg (6,1 %)4.\r\n\r\nLe groupe est présent à l'international, grâce à sa marque Heineken commercialisée dans plus de 190 pays. Heineken International produit ou commercialise environ 250 marques de bières et cidres, dont Heineken, Amstel, Desperados, Sol ou Tiger.\r\n\r\nHeineken France se dispute la place de premier brasseur français avec Brasseries Kronenbourg. En 2014, Heineken a annoncé détenir 17,3 % des parts de marchés (en volume) en France, ce qui le place en tête des ventes en 2013 5.\r\n\r\nEn France, ses marques phares sont Heineken, Pelforth, Desperados et Fischer.\r\n\r\nEn Belgique, ses marques phares sont Maes, Grimbergen, Affligem, Mort Subite, Desperados ou encore Stassen.",
         "nbNote": 1,
         "noteTotal": 50,
-        "loc": "ai",
+        "loc": "nl",
         "image": [
-          "data/logo.png",
-          "data/logo.png",
+          "data/img/brasserie/heineken1.png",
+          "data/img/brasserie/heineken2.png",
           "data/logo.png"
         ]
       }
     },
     {
       "brasserie": {
-        "name": "Tuez moi",
-        "desc": "jvais me pendre",
+        "name": "Huygues",
+        "desc": "On retrouve au moins depuis 1654 la trace certaine d'une activité brassicole au lieu-dit Appelhoek à Melle.\r\n\r\nEn 1906, la brasserie locale est reprise par Léon Huyghe qui y est entré quatre ans plus tôt. L'entreprise s'appelle alors la brasserie Den Appel (La Pomme en français) faisant référence au lieu-dit Appelhoek. Son fils et son gendre succèdent à Léon en 1925. La brasserie produit alors essentiellement des pils. En 1936, la brasserie est rebaptisée Brasserie Léon Huyghe.\r\n\r\nJean de Laet, mari d'une petite-fille de Léon Huyghe, arrive dans l'entreprise dans les années 1980 et lance la brasserie dans la production de bière de fermentation haute. Sont alors commercialisée des bières qui s'appellent Artevelde, Minty (bière verte à la menthe), Poiluchette, Guillotine (sortie pour le bicentenaire de la Révolution française). Le 26 décembre 1989, la Delirium Tremens est brassée pour la première fois. Cette bière fit la renommée de la brasserie. De nouveaux produits sont régulièrement créés : Floris, Mongozo, etc1.\r\n\r\nEn 2005, la brasserie a fêté ses 350 ans. La capacité actuelle de la brasserie est de 148 000 hectolitres. Elle est actuellement en phase d’extension et atteindra bientôt les 300 000 hectolitres.\r\n\r\nLa brasserie fait partie de l'association brassicole Belgian Family Brewers.",
         "nbNote": 1,
         "noteTotal": 50,
-        "loc": "ai",
+        "loc": "be",
         "image": [
-          "data/logo.png",
-          "data/logo.png",
+          "data/img/brasserie/huygues1.png",
+          "data/img/brasserie/huygues2.png",
           "data/logo.png"
         ]
       }
     },
     {
       "brasserie": {
-        "name": "Je suis un Super test",
-        "desc": "Impressionant! Le clean up va etre super long...",
+        "name": "Duvel Moortgat",
+        "desc": "La brasserie Duvel appelée précédemment brasserie Moortgat brasse et commercialise les bières Duvel, la pils de luxe Bel Pils (lancée en 1930), la Vedett (créée en 1945 par Albert Moortgat, le fils de Jan) et la bière d'abbaye Maredsous (depuis 1963).\r\n\r\nEn septembre 2006, Duvel acquiert la brasserie d'Achouffe1. En août 2010, Duvel acquiert l'entreprise brassicole De Koninck, pour un montant inconnu2.\r\n\r\nJusqu'en 2013, Duvel Moortgat était coté à l'Euronext, sur le segment NextPrime. Le groupe est à présent détenu par FIBEMI et Hop!nvest. En octobre 2013, Duvel Moortgat acquiert Boulevard Brewing Company, entreprise brassicole américaine3. En juillet 2015, Duvel Moortgat signe un contrat de coopération avec la brasserie américaine Firestone Walker Brewing, pour combiner leurs activités américaines4.",
         "nbNote": 1,
         "noteTotal": 50,
-        "loc": "af",
+        "loc": "be",
         "image": [
-          "data/logo.png",
-          "data/logo.png",
+          "data/img/brasserie/duvel moortgat1.png",
+          "data/img/brasserie/duvel moortgat2.png",
+          "data/logo.png"
+        ]
+      }
+    },
+    {
+      "brasserie": {
+        "name": "BrewDog",
+        "desc": "La brasserie a été créée en 2007 par Martin Dickie et James Watt qui souhaitaient présenter sur le marché britannique des produits autres que les industriels lagers et ales. Une de leurs premières bières fut la Paradox (mûrie dans des tonneaux à whisky en chêne), qui fut présentée sur le marché en trois versions différentes. Cette année-là, 1 050 hl furent brassés et embouteillés manuellement. En 2008 une machine à embouteiller fut installée et l'entreprise s'agrandit à 9 collaborateurs. Leur bière la plus forte à ce moment-là, la Tokyo (un stout impériale à 18,2 %) fit la une des informations lorsque qu'une motion fut votée au parlement écossais en vue d'interdire la bière. BrewDog exporta ses produits vers la Suède, le Japon et les États-Unis. Avec une production annuelle de 4 050 hl, la brasserie devint immédiatement la plus grande brasserie indépendante d'Écosse. En 2009 il fallut procéder au placement de cuves à bière supplémentaires notamment à la suite du succès de leur Punk IPA, la marque de bière ayant connu la plus forte expansion en Grande-Bretagne et la meilleure vente IPA en Scandinavie. En 2010 des cuves supplémentaires ont à nouveau dû être placées. En 2010 BrewDog ouvrit son premier bar à bières à Aberdeen, suivi en 2011 par des bars à bière à Édimbourg, Glasgow et Londres. En 2011, l'entreprise comptait 67 employés et atteignit une production annuelle de 26 750 hL. En 2010 James Watt fut élu en Écosse le plus jeune entrepreneur de l'année de tous les temps.",
+        "nbNote": 1,
+        "noteTotal": 50,
+        "loc": "gb",
+        "image": [
+          "data/img/brasserie/brewdog1.png",
+          "data/img/brasserie/brewdog2.png",
           "data/logo.png"
         ]
       }

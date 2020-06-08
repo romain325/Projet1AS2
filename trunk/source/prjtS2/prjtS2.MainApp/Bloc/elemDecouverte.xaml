@@ -19,21 +19,27 @@
 
     <materialDesign:PopupBox HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" StaysOpen="True">
         <materialDesign:PopupBox.ToggleContent>
-            <Border HorizontalAlignment="Stretch">
-                <Grid HorizontalAlignment="Stretch">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="3*"/>
-                    </Grid.RowDefinitions>
+            
+                <Border HorizontalAlignment="Stretch">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="7*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
 
+                        
+                            <Image Source="{Binding Decouverte.Images[0],ElementName=Decouv, Converter={StaticResource UriToBitmapConver}}"  Grid.Row="0"/>
+                        
+                        <Viewbox Margin="20" Grid.Row="1">
+                            <Button Background="Transparent" BorderThickness="0" Click="UpdateBeer_OnClick" x:Name="updateBeer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Decouverte.Nom,ElementName=Decouv}"/>
+                            </Button>
+                        </Viewbox>
 
-                    <Image Source="{Binding Decouverte.Images[0],ElementName=Decouv, Converter={StaticResource UriToBitmapConver}}"  Grid.Row="0"/>
-                    <Viewbox Margin="20" Grid.Row="1">
-                        <TextBlock TextWrapping="Wrap" Text="{Binding Decouverte.Nom,ElementName=Decouv}"/>
-                    </Viewbox>
-
-                </Grid>
+                    </Grid>
+                    
             </Border>
+            
         </materialDesign:PopupBox.ToggleContent>
             <local:Biere BeerPropName="{Binding Decouverte.Biere.Nom,ElementName=Decouv, Converter={StaticResource StringToLow}}"/>
     </materialDesign:PopupBox>

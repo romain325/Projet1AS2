@@ -50,6 +50,7 @@ namespace prjtS2.MainApp
             }
         }
 
+
         /// <summary>
         /// Beer Prop value calculate from his name
         /// </summary>
@@ -95,6 +96,38 @@ namespace prjtS2.MainApp
         /// /Reference to an instance of the manager
         /// </summary>
         private Managing.Manager Mng => Managing.Manager.Instance;
+
+        public void ReturnToDefaultValue()
+        {
+            title.Text = "";
+            content.Text = "";
+            degree.Text = "";
+            prix.Text = "";
+            img.Text = "";
+            img2.Text = "";
+            img3.Text = "";
+
+            couleur.SelectedIndex = 0;
+            brass.SelectedIndex = 0;
+
+            Styles.Clear();
+            Aromes.Clear();
+            Specs.Clear();
+            Cereales.Clear();
+            TypesB.Clear();
+
+            bar.Visibility = Visibility.Hidden;
+            bar.Value = 0;
+            prog.Text = "";
+
+            OnPropertyChanged(nameof(couleur));
+            OnPropertyChanged(nameof(styles));
+            OnPropertyChanged(nameof(cereales));
+            OnPropertyChanged(nameof(types));
+            OnPropertyChanged(nameof(spec));
+            OnPropertyChanged(nameof(aromes));
+            OnPropertyChanged(nameof(brass));
+        }
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -341,6 +374,7 @@ namespace prjtS2.MainApp
 
                     MessageBox.Show("La biere a bien été ajouté");
                     Mng.EventHub.OnPropBeerDicChanged(this);
+                    ReturnToDefaultValue();
                 }
                 catch (Exception exep)
                 {

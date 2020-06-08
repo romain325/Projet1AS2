@@ -16,14 +16,35 @@ namespace prjtS2.MainApp.AdminPanel
     public partial class RemoveBeer : UserControl, INotifyPropertyChanged
     {
         /// <summary>
-        /// /Reference to an instance of the manager
+        /// Command Class used to remove a beer
         /// </summary>
-        Managing.Manager Mng => Managing.Manager.Instance;
+        RemoveBeerCommand RemoveIt = new RemoveBeerCommand();
 
         public RemoveBeer()
         {
             InitializeComponent();
             Mng.EventHub.BeerDicChanged += OnBeerRemoved;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// The command used itself
+        /// </summary>
+        public ICommand Command => RemoveIt.RemoveIt;
+
+        /// <summary>
+        /// List of beer that can be removed
+        /// </summary>
+        public List<string> Lib => Library.DICO_BIERES.Keys.ToList();
+
+        /// <summary>
+        /// /Reference to an instance of the manager
+        /// </summary>
+        Managing.Manager Mng => Managing.Manager.Instance;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         /// <summary>
@@ -36,29 +57,5 @@ namespace prjtS2.MainApp.AdminPanel
             lb.SelectedIndex = 0;
             OnPropertyChanged(nameof(Lib));
         }
-
-        /// <summary>
-        /// Command Class used to remove a beer
-        /// </summary>
-        RemoveBeerCommand RemoveIt = new RemoveBeerCommand();
-
-        /// <summary>
-        /// The command used itself
-        /// </summary>
-        public ICommand Command => RemoveIt.RemoveIt;
-
-        /// <summary>
-        /// List of beer that can be removed
-        /// </summary>
-        public List<string> Lib => Library.DICO_BIERES.Keys.ToList();
-
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
     }
 }

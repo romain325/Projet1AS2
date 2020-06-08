@@ -23,9 +23,10 @@
                 <Viewbox MaxHeight="50" Margin="15 0 15 0">
                     <TextBlock TextWrapping="Wrap">Découvrez des produits selon différents critères et laissez-vous surprendre</TextBlock>
                 </Viewbox>
-                <RichTextBox>
+                <RichTextBox IsReadOnly="True">
                     <FlowDocument>
                         <Paragraph FontSize="20" Foreground="Red" FontWeight="DemiBold" TextAlignment="Center">Attention Nous ne prenons Pas en compte vos Impératifs ici! (allergies, choix, etc...)</Paragraph>
+                        <Paragraph FontSize="15" Foreground="Gray" TextAlignment="Center">If you Want to update the beer result just click on the name, if you want to see the beer, click on the image!</Paragraph>
                     </FlowDocument>
                 </RichTextBox>
             </StackPanel>

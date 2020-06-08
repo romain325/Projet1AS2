@@ -5,16 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace prjtS2.MainApp.AdminPanel
 {
@@ -23,32 +15,18 @@ namespace prjtS2.MainApp.AdminPanel
     /// </summary>
     public partial class RemoveLesson : UserControl, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Command Class used to remove a beer
+        /// </summary>
+        RemoveLessonCommand RemoveIt = new RemoveLessonCommand();
+
         public RemoveLesson()
         {
             InitializeComponent();
             Mng.EventHub.LessonDicChanged += OnLessonChanged;
         }
 
-        /// <summary>
-        /// /Reference to an instance of the manager
-        /// </summary>
-        Managing.Manager Mng => Managing.Manager.Instance;
-
-        /// <summary>
-        /// Called when EventHub send a BeerChanged
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnLessonChanged(object sender, EventArgs e)
-        {
-            lb.SelectedIndex = 0;
-            OnPropertyChanged(nameof(Lib));
-        }
-
-        /// <summary>
-        /// Command Class used to remove a beer
-        /// </summary>
-        RemoveLessonCommand RemoveIt = new RemoveLessonCommand();
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// The command used itself
@@ -60,12 +38,25 @@ namespace prjtS2.MainApp.AdminPanel
         /// </summary>
         public List<string> Lib => Library.LECON.Keys.ToList();
 
+        /// <summary>
+        /// /Reference to an instance of the manager
+        /// </summary>
+        Managing.Manager Mng => Managing.Manager.Instance;
 
-
-        public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Called when EventHub send a BeerChanged
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnLessonChanged(object sender, EventArgs e)
+        {
+            lb.SelectedIndex = 0;
+            OnPropertyChanged(nameof(Lib));
         }
     }
 }

@@ -1,6 +1,12 @@
 {
   "root": [
-     {
+    {
+      "style": {
+        "key": "orange",
+        "value": "Robe Orangée"
+      }
+    },
+    {
       "style": {
         "key": "na",
         "value": "Aucune Préference"

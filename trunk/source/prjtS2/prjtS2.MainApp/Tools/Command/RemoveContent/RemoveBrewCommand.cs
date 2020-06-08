@@ -11,6 +11,7 @@ namespace prjtS2.MainApp.Tools.Command
     /// </summary>
     public class RemoveBrewCommand : RemoveContentCommand
     {
+
         public override bool CanExecute(object param)
         {
             if (param is object parameters)

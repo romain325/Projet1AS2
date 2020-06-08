@@ -1,6 +1,8 @@
 ﻿using prjtS2.FunctLibrary.Produit;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace prjtS2.FunctLibrary
@@ -33,16 +35,28 @@ namespace prjtS2.FunctLibrary
 
         private readonly List<Biere> Bieres;
 
+        private Random rnd = new Random();
+
+
+        private Biere _biere;
         /// <summary>
         /// Return a random entity of the Beers List 
         /// </summary>
-        public Biere Biere
-        {
-            get
+        public Biere Biere 
+        { 
+            get  => _biere; 
+            set
             {
-                Random rnd = new Random();
-                return Bieres[rnd.Next(Bieres.Count)];
+                _biere = value;
+                OnPropertyChanged();
             }
         }
+
+        public void SelectABeer()
+        {
+            Biere = Bieres[rnd.Next(Bieres.Count)];
+        }
+
+
     }
 }

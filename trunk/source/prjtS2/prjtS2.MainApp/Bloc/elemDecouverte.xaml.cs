@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using prjtS2.MainApp.Managing;
 
 namespace prjtS2.MainApp
 {
@@ -18,6 +19,8 @@ namespace prjtS2.MainApp
     /// </summary>
     public partial class ElemDecouverte : UserControl
     {
+        Managing.Manager Mng => Manager.Instance;
+
         public ElemDecouverte()
         {
             InitializeComponent();
@@ -43,5 +46,9 @@ namespace prjtS2.MainApp
             }
         }
 
+        private void UpdateBeer_OnClick(object sender, RoutedEventArgs e)
+        {
+            Mng.EventHub.OnUpdateDecouverteProp(this);
+        }
     }
 }

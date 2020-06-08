@@ -47,8 +47,10 @@ namespace prjtS2.FunctLibrary.Ressources
             }
             else
             {
-                throw new Exception("This Key already exist in the DICTIONNARY: " + GetType());
+                throw new Exception("La clé que vous tentez d'utiliser existe déjà");
             }
+
+            
         }
 
         /// <summary>

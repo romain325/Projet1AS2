@@ -2,26 +2,6 @@
   "root": [
     {
       "profil": {
-        "username": "admin",
-        "nom": "admin",
-        "prenom": "admin",
-        "biographie": "admin of the admin",
-        "mail": "admin@admin.net",
-        "mdp": "1xab0I5lrsVUtv+wVZWerQ==",
-        "dateN": "16660101",
-        "loc": "aq",
-        "allergies": {
-          "alcool": false,
-          "gluten": false,
-          "levure": false
-        },
-        "favoris": [],
-        "pdp": "data/img/profil/admin.png",
-        "isAdmin": true
-      }
-    },
-    {
-      "profil": {
         "username": "roro",
         "nom": "OLIVIER",
         "prenom": "Romain",
@@ -37,6 +17,26 @@
         },
         "favoris": [],
         "pdp": "data/img/profil/roro.png",
+        "isAdmin": true
+      }
+    },
+    {
+      "profil": {
+        "username": "admin",
+        "nom": "admin",
+        "prenom": "admin",
+        "biographie": "admin of the admin",
+        "mail": "admin@admin.net",
+        "mdp": "1xab0I5lrsVUtv+wVZWerQ==",
+        "dateN": "16660101",
+        "loc": "aq",
+        "allergies": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "favoris": [],
+        "pdp": "data/img/profil/admin.png",
         "isAdmin": true
       }
     },
