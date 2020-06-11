@@ -1,0 +1,70 @@
+{
+  "root": [
+    {
+      "arome": {
+        "key": "torrifie",
+        "value": "Saveur Torrifié"
+      }
+    },
+    {
+      "arome": {
+        "key": "malt",
+        "value": "Malte"
+      }
+    },
+    {
+      "arome": {
+        "key": "caramel",
+        "value": "Touche Caramélisée"
+      }
+    },
+    {
+      "arome": {
+        "key": "coriande",
+        "value": "Coriandre"
+      }
+    },
+    {
+      "arome": {
+        "key": "na",
+        "value": "Aucune Préference"
+      }
+    },
+    {
+      "arome": {
+        "key": "amer",
+        "value": "Amer"
+      }
+    },
+    {
+      "arome": {
+        "key": "aigre",
+        "value": "Aigre"
+      }
+    },
+    {
+      "arome": {
+        "key": "sucre",
+        "value": "Sucré"
+      }
+    },
+    {
+      "arome": {
+        "key": "bois",
+        "value": "Boisé"
+      }
+    },
+    {
+      "arome": {
+        "key": "fruit",
+        "value": "Fruité"
+      }
+    },
+    {
+      "arome": {
+        "key": "mine",
+        "value": "Minéral"
+      }
+    }
+  ]
+}

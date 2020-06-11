@@ -1,0 +1,52 @@
+{
+  "root": [
+    {
+      "spec": {
+        "key": "tequila",
+        "value": "Tequila"
+      }
+    },
+    {
+      "spec": {
+        "key": "epice",
+        "value": "Epicé"
+      }
+    },
+    {
+      "spec": {
+        "key": "fermhaute",
+        "value": "Fermentation Haute"
+      }
+    },
+    {
+      "spec": {
+        "key": "na",
+        "value": "Aucune Préference"
+      }
+    },
+    {
+      "spec": {
+        "key": "poivre",
+        "value": "Touche Poivré"
+      }
+    },
+    {
+      "spec": {
+        "key": "fut_chene",
+        "value": "Fermenté en Fût de Chêne"
+      }
+    },
+    {
+      "spec": {
+        "key": "sake",
+        "value": "Fermentation au Sake"
+      }
+    },
+    {
+      "spec": {
+        "key": "null",
+        "value": "Aucune Spécificités Particulières"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="prjtS2.MainApp.RechBrasserie"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prjtS2.MainApp"
+             mc:Ignorable="d" 
+             x:Name="RechercheBrasserie"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Style="{StaticResource searchBar}" 
+                 Text="{Binding TextBoxVal, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, ElementName=RechercheBrasserie }" />
+
+
+
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel DataContext="{Binding ElementName=RechercheBrasserie}">
+                <ListBox IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding Lib}" ItemTemplate="{StaticResource blocInfoBrewery}" />
+                <local:BlocInfo Ajout="Brasserie" Margin="20"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+
+    </Grid>
+    
+</UserControl>

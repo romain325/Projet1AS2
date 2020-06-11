@@ -1,0 +1,54 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:prjtS2.MainApp">
+
+    <DataTemplate x:Key="blocInfoBeer">
+        <local:BlocInfo BeerName="{Binding}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="blocInfoBrewery">
+        <local:BlocInfo BreweryName="{Binding}"/>
+    </DataTemplate>
+
+
+    <ContentControl x:Key="detailBeerP">
+        <Grid>
+            <TextBlock Text="{Binding SelectedItem,ElementName=lb}"/>
+            <local:NvlBiere BeerPropName="{Binding SelectedItem,ElementName=lb}"/>
+        </Grid>
+    </ContentControl>
+
+    <ContentControl x:Key="detailBrewP">
+        <Grid>
+            <TextBlock Text="{Binding SelectedItem,ElementName=lb}"/>
+            <local:NvlBrasserie BreweryPropName="{Binding SelectedItem,ElementName=lb}"/>
+        </Grid>
+    </ContentControl>
+
+    <ContentControl x:Key="detailBeerRm">
+        <Grid>
+            <local:Biere  BeerPropName="{Binding SelectedItem ,ElementName=lb}" />
+            <Button Command="{Binding Command,ElementName=RmBeer}" CommandParameter="{Binding SelectedItem, ElementName=lb}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20" Content="Remove This One!" />
+        </Grid>
+    </ContentControl>
+
+    <ContentControl x:Key="detailLessonRm">
+        <Grid>
+            <local:Lecon LeconPropName="{Binding SelectedItem ,ElementName=lb}" />
+            <Button Command="{Binding Command,ElementName=RmLesson}" CommandParameter="{Binding SelectedItem, ElementName=lb}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Content="Remove This One!" />
+        </Grid>
+    </ContentControl>
+
+    <ContentControl x:Key="detailBrewRm">
+        <Grid>
+            <local:Brasserie BreweryPropName="{Binding SelectedItem ,ElementName=lb}" />
+            <Button Command="{Binding Command,ElementName=RmBrass}" CommandParameter="{Binding SelectedItem, ElementName=lb}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20" Content="Remove This One!" />
+        </Grid>
+    </ContentControl>
+
+    <DataTemplate x:Key="masterPresentation">
+        <DockPanel>
+            <TextBlock Text="{Binding }" DockPanel.Dock="Left" FontSize="22"/>
+        </DockPanel>
+    </DataTemplate>
+</ResourceDictionary>

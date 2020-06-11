@@ -1,0 +1,42 @@
+{
+  "root": [
+    {
+      "profil": {
+        "username": "balkaLovForever",
+        "nom": "balkany",
+        "prenom": "patoche",
+        "biographie": "Vous n'avez pas encore de description",
+        "mail": "levallois2021@gmail.com",
+        "mdp": "fbkoFfVdQipzS/7/tMuziQ==",
+        "dateN": "19751010",
+        "loc": "fr",
+        "allergies": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "favoris": [],
+        "isAdmin": false
+      }
+    },
+    {
+      "profil": {
+        "username": "roro",
+        "nom": "Olivier",
+        "prenom": "Romain",
+        "biographie": "Vous n'avez pas encore de description",
+        "mail": "levallois2021@gmail.com",
+        "mdp": "kquIlak2As5sQlQkndz7EQ==",
+        "dateN": "20011016",
+        "loc": "fr",
+        "allergies": {
+          "alcool": false,
+          "gluten": false,
+          "levure": false
+        },
+        "favoris": [],
+        "isAdmin": true
+      }
+    }
+  ]
+}

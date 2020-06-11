@@ -1,0 +1,165 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:prjtS2.MainApp" xmlns:tools="clr-namespace:prjtS2.MainApp.Tools"
+                    >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Green.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.LightGreen.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    
+    <SolidColorBrush x:Key="MenuBG" Color="BlanchedAlmond" Opacity="0.9"/>
+    <SolidColorBrush x:Key="PopUpBG" Color="ForestGreen" Opacity="0.3"/>
+    <SolidColorBrush x:Key="defaultButtonBackground" Color="#32893D" Opacity="0.5"/>
+
+
+    <FontFamily x:Key="defaultFontFamily">Helvetica</FontFamily>
+    <FontFamily x:Key="defaultTitleFontFamily">Brush Script Std</FontFamily>
+    <FontFamily x:Key="defaultButtonFontFamily">Arial</FontFamily>
+
+
+
+    <Style x:Key="squareImage" TargetType="Image">
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"/>
+    </Style>
+
+    <Style x:Key="blocStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="5px"/>
+        <Setter Property="Margin" Value="10 5 10 5"/>
+    </Style>
+
+    <Style TargetType="ListBoxItem">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="searchBar" BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="Margin" Value="10 0 0 10"/>
+        <Setter Property="FontSize" Value="60"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="descTitre">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="MinHeight" Value="20"/>
+        <Setter Property="Margin" Value="5 10 0 10"/>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="descCont">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Margin" Value="10 15 0 10"/>
+    </Style>
+
+
+    <Style TargetType="CheckBox" BasedOn="{StaticResource MaterialDesignAccentCheckBox}">
+        <Setter Property="Margin" Value="10 0 0 0"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="information">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Margin" Value="5 0 0 0"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="barButton" BasedOn="{StaticResource MaterialDesignFlatDarkBgButton}">
+        <Setter Property="Margin" Value="15 0" />
+        <Setter Property="Height" Value="75"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="squareButton" BasedOn="{StaticResource MaterialDesignFlatDarkBgButton}">
+        <Setter Property="Width" Value="{Binding Width, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Converter={StaticResource ResourceKey=DivisionMathConverter}, ConverterParameter=3}"/>
+        <Setter Property="Height" Value="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="Background" Value="{StaticResource defaultButtonBackground}"/>
+    </Style>
+
+    <Style TargetType="Border" x:Key="squareBorder" BasedOn="{StaticResource MaterialDesignToolBarMainPanelBorderStyle}">
+        <Setter Property="Width" Value="{Binding Width, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Converter={StaticResource ResourceKey=DivisionMathConverter}, ConverterParameter=4}"/>
+        <Setter Property="Height" Value="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="Background" Value="{StaticResource defaultButtonBackground}"/>
+        <Setter Property="Margin" Value="10"/>
+    </Style>
+
+
+    <Style x:Key="multiLineTextBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <Setter Property="AcceptsTab" Value="True"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+    </Style>
+
+    <Style x:Key="multiLinePlaceHolder" TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                 x:Name="textSource" 
+                                 Style="{StaticResource multiLineTextBox}"
+                                 Background="Transparent" 
+                                 Panel.ZIndex="2" />
+                        <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+                                    <Setter Property="Foreground" Value="Transparent"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="placeHolder" TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                 x:Name="textSource" 
+                                 Background="Transparent" 
+                                 Panel.ZIndex="2" />
+                        <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1">
+                            <TextBox.Style>
+                                <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
+                                    <Setter Property="Foreground" Value="Transparent"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

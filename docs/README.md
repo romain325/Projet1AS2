@@ -11,9 +11,15 @@ Voici l'ensemble des données à connaître pour pouvoir travailler de manière 
 
 # **INSTALLATION**
 
-You just have to get into the "Installation" folder and use the Setup.exe \
-If you want to build it from Visual Studio, use the latest Release in the tags folder 
+	- <../installation.md>
 
+## *How to have an Admin Profil*
+
+While creating your account, on the second page of this page, press Ctrl+Alt and then enter the Password "AdminMode101" \
+Then you'll recieve a message to inform you that you've been added to the Admin Team \
+
+## *Usage Advice*
+You'll have to accept the fact the app run in Administrator Mode
 
 ---------------------------------------------------
 
@@ -45,10 +51,11 @@ A travers une étude de marchés, nous avons remarqué qu'il existe en effet des
 
 --------------------------------------------
 
-##IDEES PRINCIPALES
+## OPTIONS PRINCIPALES
  
 
-###DICTIONNAIRE BIERE contenant pour chaque bière : 
+### DICTIONNAIRE BIERE contenant pour chaque bière : 
+
 	* Nom de la bière \
 	* Nom de la brasserie \
 	* Localisation \
@@ -67,36 +74,40 @@ A travers une étude de marchés, nous avons remarqué qu'il existe en effet des
 	* Notes \
 
 
-###DICTIONNAIRE BRASSERIE contenant pour chaque brasserie: 
+### DICTIONNAIRE BRASSERIE contenant pour chaque brasserie:
+
 	* Nom  \
 	* Description \
 	* Localisation = Pays / departement \
 	* Liste de Bieres \
 	* Image \
 
+### Un Espace Utilisateur renseigné
 
-###Un Espace Utilisateur renseigné 
-
-Celui ci contiendra les gouts, biere déjà bu, age, localisation , impératifs et tout les informations de notre client
-Celui ci pourra aussi ajouter des produits à ses favoris ou encore une liste de bière l'intéressant
+Celui ci contiendra les gouts, age, localisation , impératifs et tout les informations de notre client
+Celui ci pourra aussi ajouter des produits à ses favoris
 Il pourra aussi noter les produits qu'il a déjà gouté afin de donné une note communautaire aux différents produits!
 
-###Menu Recherches central
+### Menu Recherches central
 
 Ce menu permet à l'utilisateur de rechercher tout type de bière à l'aide d'un menu de recherche précos et complet
 
-###Mode découverte
+### Mode découverte
+
 Permet de découvrir des bières selon des critères scriptés que nous avons choisis (avec des petits jeux de mots -> nos brasseries ont du talent, les potions magique, les combattantes, les raffinés, etc....) ainsi que de l'aléatoire afin de ne pas toujours avoir les memes résultats!
 Cela permet de toujours avoir du nouveau sans redondance, et toujours garder l'envie de découvrir de nouveaux produits pour l'utilisateur
+Ces découvertes seront scriptés et n'ont pas vocations à être modifiables / ajoutable / enlevable.
 
-###Une option guide de consommation permettant d’apprendre différentes choses sur la bieres: 
+### Une option guide de consommation permettant d’apprendre différentes choses sur la bieres:
+
 	* Types de verre 
 	* Type de Distillation 
 	* Différents Types expliqués 
 	* Comment boire sa bière 
 	* Comprendre la distillation 
 
-##Public visé 
+## Public visé
+
 Nous visons avant tout les Amateurs // grand public
 Ainsi nous offrons un accompagnement dans la découverte d'un monde houblonné
 Nous lui apportons un suivi et des conseils personnalisés
@@ -109,16 +120,21 @@ Ainsi meme un connaisseur pourra découvrir de nouveaux produits
 -------------------------------------
 
 # **USEFUL INFORMATIONS**
+
 --------------------------------------------------------------
+
 ##Sketch:
+
 	[Lien vers Description imagé](sketch/sketch_description.md)
 
 ##Persona:
+
 	[Lien vers Didier](persona/Didier.pdf) 
 	[Lien vers Sarah](persona/Sarah.pdf) 
 	[Lien vers Ulysse](persona/Ulysse.pdf) 
 
 ##UserStories
+
 	*[Création d'nun compte](userStory/creaCompte.md) 
 	*[Modification du profil](userStory/modifProfil.md) 
 	*[Notation d'un Produit](userStory/noterUnProduit.md) 
@@ -126,13 +142,16 @@ Ainsi meme un connaisseur pourra découvrir de nouveaux produits
 	*[Recherche Détaillé](userStory/rechDetaille.md) 
 
 ##UseCaseDiagram
+
 	![UseCase Diagram](UseCaseDiagram/UseCaseDiagram.png)
 
 ##Patron de Conception et Architecture utilisés:
+
 	- <Patron_Architecture.md>
 
 
 ##Considération Ergonomique:
+
 	- <ConsidérationErgonomique.md>
 
 

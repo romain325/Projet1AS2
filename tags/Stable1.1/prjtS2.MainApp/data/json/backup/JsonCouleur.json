@@ -1,0 +1,46 @@
+{
+  "root": [
+    {
+      "couleur": {
+        "key": "translucide",
+        "value": "Translucide"
+      }
+    },
+    {
+      "couleur": {
+        "key": "brune",
+        "value": "Brune"
+      }
+    },
+    {
+      "couleur": {
+        "key": "rouge",
+        "value": "Rouge"
+      }
+    },
+    {
+      "couleur": {
+        "key": "noir",
+        "value": "Noir"
+      }
+    },
+    {
+      "couleur": {
+        "key": "ambre",
+        "value": "Ambré"
+      }
+    },
+    {
+      "couleur": {
+        "key": "blonc",
+        "value": "Blonc"
+      }
+    },
+    {
+      "couleur": {
+        "key": "dore",
+        "value": "Dorée"
+      }
+    }
+  ]
+}
